@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+    <html lang = "ko">
+        <head>
+            <meta charset="UTF-8">
+            <title>HTML 기본 문서</title>
+        </head>
+        <body>
+                <h1>프런트엔드 웹 개발</h1>
+                <hr>
+                <p>html<p>
+                <p>css</p>
+                <p>자바스크립트</p>
+                <b>
+                <table>
+                    <tr>
+                        <td><d>김우성</d></td>
+                        <td>ddd</td>
+                    </tr>
+                    <tr>
+                        <td><d>gkgk</d></td>
+                        <td>dddvvv</td>
+                    </tr>
+                    <tr>
+                        <td><d>sddsd</d></td>
+                        <td><d>wwwww</d></td>
+                    </tr>
+                <b>    
+                </table>
+        </body>
+    </html>
