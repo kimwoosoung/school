@@ -1,0 +1,9 @@
+-프로그래밍
+#include <stdio.h>
+
+int main() {
+    float m,l,e;
+    scanf("%f %f %f" ,&m, &l, &e);
+    printf("%.2f",(m + l + e)/3.0);
+    return 0;
+}
