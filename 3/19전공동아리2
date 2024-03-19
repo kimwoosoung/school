@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="height:800px">
+        <div style="background-color: skyblue;height: 20%;">
+            <h1>헤더 부분 블룩</h1>
+        </div>
+        <div style="background-color: yellow;height: 60%;">
+            <h1>섹션1 블록</h1>
+            <span style="background-color:orange">span 인라인 태그:내용만큼 차지</span>
+    <a href = "#">a 인라인 태그</a>
+        </div>
+        <div style="background-color: gray;height: 10%;">
+            <h1>아티클 블록</h1>
+        </div>
+        <div style="background-color: pink;height: 10%;">
+            <h1>푸터 블룩</h1>
+        </div>
+    </div>
+</body>
+</html>
