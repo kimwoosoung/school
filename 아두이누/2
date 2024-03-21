@@ -1,0 +1,76 @@
+- 옴의 법칙
+I(전류) V(전압) R(저항)
+I = R\(나누기)V,  V = I*(곱하기)R,  R = I\(나누기)V
+
+- 저항 구하기
+배터리 수*저항값
+
+- 시리얼 모니터
+아두이노 보드 자체에는 디스플레이 모듈이 존재하지 않기 때문에 
+프로그램이 실행되는 과정에서 데이터가 어떻게 변하는지 확인하기가 쉽지 않음.
+시리얼 모니터를 이용해서 버튼이 눌릴 때 정상적으로 눌렸는지 값을 출력해볼 수 있음. 
+
+- 시리얼 모니터 사용 방법
+Serial.begin() 함수 / Serial.println() or Serial.print(
+Serial.begin() 함수는 시리얼 통신을 시작하기 전에 통신 속도를
+맞추기 위한 목적으로 setup() 함수에서 한번만 실행, 매개변수로 사용된
+9600이라는 숫자는 초당 9600비트(bit)를 전송하겠다는 의미의
+보드레이트(Baud rate)를 의미
+
+Serial.println() 함수와 Serial.print() 함수의 차이는
+Serial.println() 함수는 문자를 출력 후에 줄 바꿈을 통해 다음 줄에
+새로운 문자를 출력하는 함수이며 Serial.print() 함수는 출력 문자 
+
+- 시리얼 통신
+Serial.available()는 버퍼에 데이터가 있는지 확인해서
+데이터가 있으면 true를 반환
+Serial.read() 버퍼에 저장된 데이터 중에서 1byte를 가져옴
+
+- 시리얼 모니터 출력하기
+void setup()
+{
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  Serial.printin('A');
+}
+결과:
+A
+A
+A
+.
+.
+.
+
+void setup()
+{
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  Serial.print('A');
+}
+결과:
+AAA...
+- 직렬 모니터 로 LED 켜고 끄기
+void setup()
+{
+  pinMode(13, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  if(Serial.available()){
+    int value = Serial.read();
+    Serial.println(value);
+  
+  if(value == 97)
+    digitalWrite(13, HIGH);
+  else
+    digitalWrite(13, LOW);
+  }
+}
