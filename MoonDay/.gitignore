@@ -1,0 +1,12 @@
+# Python Bytecode files
+__pycache__
+*.pyc
+
+# Docker 파일
+docker-compose.yml
+
+# 환경 설정 파일
+.env
+
+# 가상 환경 폴더
+venv/
